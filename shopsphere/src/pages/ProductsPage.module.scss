@@ -1,0 +1,90 @@
+$primary: #0f4c81;
+$border: #e2e8f0;
+$text: #1e293b;
+$gray: #64748b;
+$white: #ffffff;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  h1 {
+    font-size: 1.5rem;
+    color: $text;
+    span { font-size: 0.9rem; color: $gray; font-weight: 400; margin-left: 0.5rem; }
+  }
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.search {
+  padding: 0.6rem 1rem;
+  border: 1.5px solid $border;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  min-width: 220px;
+
+  &:focus { border-color: $primary; }
+}
+
+.sort {
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid $border;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  background: $white;
+
+  &:focus { border-color: $primary; }
+}
+
+.categories {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.catBtn {
+  padding: 0.5rem 1.2rem;
+  border: 1.5px solid $border;
+  border-radius: 20px;
+  background: $white;
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  color: $gray;
+
+  &:hover { border-color: $primary; color: $primary; }
+  &.active { background: $primary; color: $white; border-color: $primary; }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.noResults {
+  text-align: center;
+  padding: 4rem;
+  color: $gray;
+  span { font-size: 3rem; display: block; margin-bottom: 0.75rem; }
+}

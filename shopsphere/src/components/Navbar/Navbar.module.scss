@@ -1,0 +1,103 @@
+$primary: #0f4c81;
+$white: #ffffff;
+$shadow: 0 2px 12px rgba(0,0,0,0.1);
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $white;
+  box-shadow: $shadow;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: $primary;
+  text-decoration: none;
+
+  span { font-size: 1.1rem; }
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+
+    &:hover { color: $primary; }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.welcome {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.authBtn {
+  background: $primary;
+  color: $white;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover { opacity: 0.88; }
+}
+
+.cartBtn {
+  position: relative;
+  background: #f1f5f9;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+
+  &:hover { background: #e2e8f0; }
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: $white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
